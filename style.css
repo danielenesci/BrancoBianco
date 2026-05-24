@@ -111,3 +111,94 @@ ul {
   line-height: 2;
   opacity: 0.9;
 }
+
+/* HERO PAGINE */
+
+.page-hero {
+  padding: 140px 20% 80px;
+}
+
+.page-hero h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  opacity: 0.7;
+  max-width: 700px;
+}
+
+/* BLOCCHI FOTOGRAFICI */
+
+.photo-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  padding: 80px 12%;
+
+  min-height: 100vh;
+}
+
+.photo-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.photo-block img {
+  width: 65%;
+  height: 80vh;
+  object-fit: cover;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+
+/* TESTO */
+
+.photo-text {
+  width: 35%;
+}
+
+.photo-text h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.photo-text p {
+  opacity: 0.75;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 80px;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .photo-block,
+  .photo-block.reverse {
+    flex-direction: column;
+  }
+
+  .photo-block img {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-text {
+    width: 100%;
+  }
+
+  .page-hero {
+    padding: 120px 10% 60px;
+  }
+
+}
