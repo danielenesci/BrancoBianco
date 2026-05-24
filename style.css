@@ -86,3 +86,12 @@ nav a {
   max-width: 700px;
   line-height: 1.7;
 }
+
+.banner {
+  background: #1a1f1d;
+  color: #d7d7d7;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
