@@ -75,9 +75,9 @@ nav a {
 
 .gallery img {
   width: 100%;
-  height: 40vh;
+  height: 75vh;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 60%;
 }
 
 .caption {
