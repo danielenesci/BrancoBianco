@@ -405,3 +405,206 @@ footer {
   }
 
 }
+
+/* ===================================
+   WHITE PACK DEFINITIVO
+=================================== */
+
+/* HERO */
+
+.wp-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wp-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: brightness(0.65);
+}
+
+.wp-overlay {
+  position: absolute;
+
+  left: 10%;
+  bottom: 10%;
+
+  color: white;
+}
+
+.wp-overlay h1 {
+  font-size: 5rem;
+  font-weight: 300;
+
+  margin-bottom: 10px;
+}
+
+.wp-overlay p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* INTRO */
+
+.wp-intro {
+  padding: 140px 15%;
+}
+
+.wp-text {
+  max-width: 850px;
+}
+
+.wp-text p {
+  font-size: 1.1rem;
+  line-height: 2;
+  opacity: 0.82;
+
+  margin-bottom: 40px;
+}
+
+/* CHAPTER */
+
+.wp-chapter {
+  position: relative;
+  min-height: 100vh;
+}
+
+.wp-image {
+  width: 100%;
+  height: 100vh;
+
+  object-fit: cover;
+
+  filter: brightness(0.75);
+}
+
+.wp-caption {
+  position: absolute;
+
+  left: 10%;
+  bottom: 10%;
+
+  max-width: 600px;
+
+  color: white;
+}
+
+.wp-number {
+  font-size: 0.9rem;
+  opacity: 0.6;
+
+  letter-spacing: 3px;
+}
+
+.wp-caption h2 {
+  font-size: 4rem;
+  font-weight: 300;
+
+  margin: 10px 0 20px;
+}
+
+.wp-caption p {
+  line-height: 1.8;
+  opacity: 0.82;
+}
+
+/* FULL IMAGE */
+
+.wp-full img {
+  width: 100%;
+  height: 100vh;
+
+  object-fit: cover;
+}
+
+/* EPISODES */
+
+.wp-episodes {
+  padding: 140px 10%;
+}
+
+.wp-episodes-text {
+  margin-bottom: 80px;
+}
+
+.wp-episodes-text h2 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.wp-episodes-text p {
+  opacity: 0.75;
+}
+
+.episodes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 40px;
+}
+
+.episode-card {
+  text-decoration: none;
+  color: white;
+
+  transition: transform 0.4s;
+}
+
+.episode-card:hover {
+  transform: translateY(-8px);
+}
+
+.episode-card img {
+  width: 100%;
+  height: 60vh;
+
+  object-fit: cover;
+}
+
+.episode-info {
+  padding-top: 20px;
+}
+
+.episode-info span {
+  opacity: 0.5;
+  font-size: 0.8rem;
+
+  letter-spacing: 2px;
+}
+
+.episode-info h3 {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .wp-overlay {
+    left: 8%;
+    right: 8%;
+  }
+
+  .wp-overlay h1 {
+    font-size: 3rem;
+  }
+
+  .wp-caption {
+    left: 8%;
+    right: 8%;
+  }
+
+  .wp-caption h2 {
+    font-size: 2.5rem;
+  }
+
+  .wp-intro {
+    padding: 100px 10%;
+  }
+
+}
