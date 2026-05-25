@@ -320,3 +320,88 @@ footer {
     padding: 80px 10%;
   }
 }
+
+/* =========================
+   HOME CINEMATICA NUOVA
+========================= */
+
+.chapter {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.dark-chapter {
+  background: #050505;
+}
+
+/* IMMAGINI */
+
+.media {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
+  filter: brightness(0.72);
+}
+
+/* TESTO */
+
+.chapter-text {
+  position: absolute;
+
+  left: 10%;
+  bottom: 10%;
+
+  max-width: 600px;
+
+  color: white;
+}
+
+.chapter-text h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.chapter-text p {
+  line-height: 1.8;
+  opacity: 0.8;
+
+  margin-bottom: 30px;
+}
+
+/* LINK */
+
+.chapter-text a {
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+
+  padding-bottom: 5px;
+
+  transition: 0.3s;
+}
+
+.chapter-text a:hover {
+  border-color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .chapter-text {
+    left: 8%;
+    right: 8%;
+  }
+
+  .chapter-text h2 {
+    font-size: 2.5rem;
+  }
+
+}
