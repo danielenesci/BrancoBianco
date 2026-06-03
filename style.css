@@ -642,10 +642,13 @@ footer {
 
 /* TESTO SOPRA TUTTO */
 .video-hero .hero-content {
-  position: relative;
+   position: absolute;
+  top: 80px;
+  right: 80px;
   z-index: 2;
-  max-width: 800px;
-  padding: 20px;
+  text-align: right;
+  max-width: 500px;
+  color: white;
 }
 
 .video-hero h1 {
