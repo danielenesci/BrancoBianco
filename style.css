@@ -27,18 +27,15 @@ body {
   color: white;
 }
 
-.hero-content {
-  max-width: 700px;
-  padding: 20px;
+.hero .hero-content {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  z-index: 2;
+  text-align: right;
+  max-width: 500px;
+  color: white;
 }
-
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-
 .hero p {
   font-size: 1.1rem;
   opacity: 0.8;
