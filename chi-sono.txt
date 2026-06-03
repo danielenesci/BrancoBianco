@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chi sono | Branco Bianco</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+   <a href="index.html">Home</a>
+  <a href="progetto.html">Progetto</a>
+  <a href="galleria.html">Galleria</a>
+  <a href="escursioni.html">Escursioni</a>
+  <a href="contatti.html">Contatti</a>
+  <a href="chi-sono.html">Chi sono</a>
+</nav>
+
+<header class="page-hero">
+
+  <h1>Chi sono</h1>
+
+  <p>
+    Fotografia naturalistica, osservazione del territorio e documentazione del comportamento animale nel tempo.
+  </p>
+
+</header>
+
+<section class="section">
+
+  <div style="max-width:800px; margin:auto; line-height:1.8; opacity:0.85;">
+
+    <p>
+      Lavoro sul campo attraverso osservazione diretta e indiretta,
+      utilizzando fotografia naturalistica, fototrappolaggio e registrazioni bioacustiche
+      per studiare la presenza e il comportamento della fauna selvatica nel territorio.
+    </p>
+
+    <p>
+      Il mio lavoro non si concentra sul singolo scatto, ma sulla continuità dell’osservazione nel tempo,
+      con particolare attenzione alle dinamiche ecologiche e ai rapporti tra specie e ambiente.
+    </p>
+
+    <p>
+      Dal 2022 seguo un progetto continuativo dedicato a un branco di lupi appenninici,
+      inserito in un contesto più ampio di studio dell’ecosistema.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>Branco Bianco — osservazione e documentazione naturalistica</p>
+</footer>
+
+</body>
+</html>
