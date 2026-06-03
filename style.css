@@ -658,3 +658,55 @@ footer {
 .video-hero p {
   opacity: 0.9;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f0e;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+.hero-global {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-global .content {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  max-width: 500px;
+  text-align: right;
+  z-index: 2;
+  color: white;
+}
+
+.hero-global video,
+.hero-global img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+h1, h2 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+p {
+  opacity: 0.8;
+}
