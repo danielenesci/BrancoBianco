@@ -677,14 +677,13 @@ body {
   position: absolute;
   top: 10%;
   right: 8%;
-  max-width: 500px;
   text-align: right;
   z-index: 2;
   color: white;
+  max-width: 500px;
 }
 
 .hero-global video,
-.hero-global img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -692,14 +691,12 @@ body {
   min-height: 100%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: 0;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: 1;
 }
 
 h1, h2 {
