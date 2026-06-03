@@ -644,7 +644,7 @@ footer {
 .video-hero .hero-content {
    position: absolute;
   top: 80px;
-  right: 80px;
+  right: 160px;
   z-index: 2;
   text-align: right;
   max-width: 500px;
