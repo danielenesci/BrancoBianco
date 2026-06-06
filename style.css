@@ -48,9 +48,9 @@ body {
 
 nav {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 20px 8%;
   background: #0b0f0e;
 }
 
@@ -677,7 +677,7 @@ body {
   position: absolute;
   top: 10%;
   right: 8%;
-  text-align: right;
+  text-align: left;
   z-index: 2;
   color: white;
   max-width: 500px;
@@ -706,4 +706,28 @@ h1, h2 {
 
 p {
   opacity: 0.8;
+}
+
+.hero-nav {
+  position: absolute;
+  left: 8%;
+  top: 26%;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.hero-nav a:hover {
+  opacity: 1;
 }
