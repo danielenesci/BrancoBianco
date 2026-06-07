@@ -74,7 +74,12 @@ p {
   z-index: 2;
   color: white;
   max-width: 600px;
+  
   text-align: right;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .hero-global .content h1 {
@@ -97,18 +102,19 @@ p {
 
 .hero-nav {
   position: absolute;
-  top: 38%;
+  top: 13%;
+
   right: 8%;
   left: auto;
 
-  z-index: 3;
+  margin-top: 200px; /* distanza dal titolo */
 
   display: flex;
   flex-direction: column;
   gap: 14px;
 
-  text-align: right;
   align-items: flex-end;
+  z-index: 3;
 }
 
 .hero-nav a {
