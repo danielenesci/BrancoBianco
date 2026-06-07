@@ -1,628 +1,6 @@
-body {
-  margin: 0;
-  font-family: Arial; sans-serif;
-  background: #0b0f0e;
-  color: #eaeaea;
-  line-height: 1.6;
-}
-
 /* =========================
-   HERO HOME
+   BASE
 ========================= */
-
-.hero .hero-content {
-  position: absolute;
-  top: 10%;
-  right: 8%;
-  z-index: 2;
-  text-align: right;
-  max-width: 500px;
-  color: white;
-}
-.hero p {
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-
-/* =========================
-   NAV
-========================= */
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  gap: 30px;
-  padding: 20px 8%;
-  background: #0b0f0e;
-}
-
-nav a {
-  color: #eaeaea;
-  text-decoration: none;
-}
-
-/* =========================
-   SEZIONI BASE
-========================= */
-
-.section {
-  padding: 80px;
-}
-
-.section.dark {
-  background: #111;
-}
-
-/* =========================
-   GALLERY (pagina base)
-========================= */
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.caption {
-  margin-top: 25px;
-  opacity: 0.7;
-  max-width: 700px;
-  line-height: 1.7;
-}
-
-/* =========================
-   BANNER
-========================= */
-
-.banner {
-  background: #1a1f1d;
-  color: #d7d7d7;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
-
-/* =========================
-   TIPOGRAFIA GENERALE
-========================= */
-
-h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-
-h2 {
-  margin-top: 50px;
-  font-weight: 300;
-}
-
-ul {
-  line-height: 2;
-  opacity: 0.9;
-}
-
-/* =========================
-   PAGE HERO
-========================= */
-
-.page-hero {
-  padding: 140px 20% 80px;
-}
-
-.page-hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-
-.page-hero p {
-  opacity: 0.7;
-  max-width: 700px;
-}
-
-/* =========================
-   PHOTO BLOCK (PROGETTO)
-========================= */
-
-.photo-block {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-
-  padding: 80px 12%;
-  min-height: 100vh;
-}
-
-.photo-block.reverse {
-  flex-direction: row-reverse;
-}
-
-.photo-block img {
-  width: 65%;
-  height: 80vh;
-  object-fit: cover;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-}
-
-.photo-text {
-  width: 35%;
-}
-
-.photo-text h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.photo-text p {
-  opacity: 0.75;
-  line-height: 1.8;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  padding: 80px;
-  text-align: center;
-  opacity: 0.4;
-  font-size: 0.8rem;
-}
-
-/* =========================
-   EPISODIO
-========================= */
-
-.episode-hero {
-  padding: 140px 18% 80px;
-}
-
-.episode-hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-}
-
-.episode-hero p {
-  opacity: 0.7;
-  max-width: 700px;
-}
-
-.episode {
-  padding-bottom: 120px;
-}
-
-.episode-block {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  padding: 100px 12%;
-}
-
-.episode-block.reverse {
-  flex-direction: row-reverse;
-}
-
-.episode-block img {
-  width: 60%;
-  height: 70vh;
-  object-fit: cover;
-}
-
-.episode-block div {
-  width: 40%;
-}
-
-.episode-block h2 {
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.episode-block p {
-  opacity: 0.75;
-  line-height: 1.8;
-}
-
-.episode-full img {
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
-}
-
-.episode-text {
-  padding: 100px 20%;
-}
-
-.episode-text h2 {
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.episode-text p {
-  opacity: 0.75;
-  line-height: 1.9;
-}
-
-/* =========================
-   CONTROLLO SCENE HOME
-========================= */
-
-.scene:nth-child(3) img {
-  object-position: center 70%;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-  .photo-block,
-  .photo-block.reverse {
-    flex-direction: column;
-  }
-
-  .photo-block img {
-    width: 100%;
-    height: auto;
-  }
-
-  .photo-text {
-    width: 100%;
-  }
-
-  .page-hero {
-    padding: 120px 10% 60px;
-  }
-
-  .episode-block,
-  .episode-block.reverse {
-    flex-direction: column;
-  }
-
-  .episode-block img,
-  .episode-block div {
-    width: 100%;
-  }
-
-  .episode-hero,
-  .episode-text {
-    padding: 80px 10%;
-  }
-}
-
-/* =========================
-   HOME CINEMATICA NUOVA
-========================= */
-
-.chapter {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-}
-
-.dark-chapter {
-  background: #050505;
-}
-
-/* IMMAGINI */
-
-.media {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-
-  filter: brightness(0.72);
-}
-
-/* TESTO */
-
-.chapter-text {
-  position: absolute;
-
-  left: 10%;
-  bottom: 10%;
-
-  max-width: 600px;
-
-  color: white;
-}
-
-.chapter-text h2 {
-  font-size: 4rem;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.chapter-text p {
-  line-height: 1.8;
-  opacity: 0.8;
-
-  margin-bottom: 30px;
-}
-
-/* LINK */
-
-.chapter-text a {
-  color: white;
-  text-decoration: none;
-
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-
-  padding-bottom: 5px;
-
-  transition: 0.3s;
-}
-
-.chapter-text a:hover {
-  border-color: white;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-
-  .chapter-text {
-    left: 8%;
-    right: 8%;
-  }
-
-  .chapter-text h2 {
-    font-size: 2.5rem;
-  }
-
-}
-
-/* ===================================
-   WHITE PACK DEFINITIVO
-=================================== */
-
-/* HERO */
-
-.wp-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  filter: brightness(0.65);
-}
-
-.wp-overlay {
-  position: absolute;
-
-  left: 10%;
-  bottom: 10%;
-
-  color: white;
-}
-
-.wp-overlay h1 {
-  font-size: 5rem;
-  font-weight: 300;
-
-  margin-bottom: 10px;
-}
-
-.wp-overlay p {
-  font-size: 1.2rem;
-  opacity: 0.85;
-}
-
-/* INTRO */
-
-.wp-intro {
-  padding: 140px 15%;
-}
-
-.wp-text {
-  max-width: 850px;
-}
-
-.wp-text p {
-  font-size: 1.1rem;
-  line-height: 2;
-  opacity: 0.82;
-
-  margin-bottom: 40px;
-}
-
-/* CHAPTER */
-
-.wp-chapter {
-  position: relative;
-  min-height: 100vh;
-}
-
-.wp-image {
-  width: 100%;
-  height: 100vh;
-
-  object-fit: cover;
-
-  filter: brightness(0.75);
-}
-
-.wp-caption {
-  position: absolute;
-
-  left: 10%;
-  bottom: 10%;
-
-  max-width: 600px;
-
-  color: white;
-}
-
-.wp-number {
-  font-size: 0.9rem;
-  opacity: 0.6;
-
-  letter-spacing: 3px;
-}
-
-.wp-caption h2 {
-  font-size: 4rem;
-  font-weight: 300;
-
-  margin: 10px 0 20px;
-}
-
-.wp-caption p {
-  line-height: 1.8;
-  opacity: 0.82;
-}
-
-/* FULL IMAGE */
-
-.wp-full img {
-  width: 100%;
-  height: 100vh;
-
-  object-fit: cover;
-}
-
-/* EPISODES */
-
-.wp-episodes {
-  padding: 140px 10%;
-}
-
-.wp-episodes-text {
-  margin-bottom: 80px;
-}
-
-.wp-episodes-text h2 {
-  font-size: 4rem;
-  font-weight: 300;
-}
-
-.wp-episodes-text p {
-  opacity: 0.75;
-}
-
-.episodes-grid {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 40px;
-}
-
-.episode-card {
-  text-decoration: none;
-  color: white;
-
-  transition: transform 0.4s;
-}
-
-.episode-card:hover {
-  transform: translateY(-8px);
-}
-
-.episode-card img {
-  width: 100%;
-  height: 60vh;
-
-  object-fit: cover;
-}
-
-.episode-info {
-  padding-top: 20px;
-}
-
-.episode-info span {
-  opacity: 0.5;
-  font-size: 0.8rem;
-
-  letter-spacing: 2px;
-}
-
-.episode-info h3 {
-  font-weight: 300;
-  margin-top: 10px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-
-  .wp-overlay {
-    left: 8%;
-    right: 8%;
-  }
-
-  .wp-overlay h1 {
-    font-size: 3rem;
-  }
-
-  .wp-caption {
-    left: 8%;
-    right: 8%;
-  }
-
-  .wp-caption h2 {
-    font-size: 2.5rem;
-  }
-
-  .wp-intro {
-    padding: 100px 10%;
-  }
-
-}
-
-/* VIDEO DI SFONDO */
-.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
-}
-
-/* VELO SCURO SOPRA VIDEO */
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 1;
-}
-
-/* TESTO SOPRA TUTTO */
-.video-hero .hero-content {
-   position: absolute;
-  top: 80px;
-  right: 240px;
-  z-index: 2;
-  text-align: right;
-  max-width: 500px;
-  color: white;
-}
-
-.video-hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-
-.video-hero p {
-  opacity: 0.9;
-}
 
 body {
   margin: 0;
@@ -632,24 +10,33 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   TIPOGRAFIA
+========================= */
+
+h1, h2 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+p {
+  opacity: 0.8;
+}
+
+/* =========================
+   HERO VIDEO
+========================= */
+
 .hero-global {
   position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.hero-global .content {
-  position: absolute;
-  top: 13%;
-  right: 8%;
-  
-  text-align: right;
-  max-width: 600px;
-  color: white;
-  
-  z-index: 2;
-  
-  
 }
 
 .hero-global video {
@@ -667,41 +54,58 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-
   z-index: 1;
 }
 
-h1, h2 {
-  font-weight: 300;
-  letter-spacing: 1px;
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-global .content {
+  position: absolute;
+  top: 13%;
+  left: 8%;
+  right: 8%;
+  z-index: 2;
+  color: white;
+  max-width: 600px;
 }
 
-p {
-  opacity: 0.8;
+.hero-global .content h1 {
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  white-space: nowrap;
 }
+
+.hero-global .content p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   NAV HERO
+========================= */
 
 .hero-nav {
-  margin-top: 50px;  
   position: absolute;
-  top: 25%;
-  right: 8%;
+  top: 22%;
+  left: 8%;
+  z-index: 3;
 
-  text-align: right;  
   display: flex;
   flex-direction: column;
   gap: 14px;
-
-  z-index: 3;
-  background: transparent !important;
 }
 
 .hero-nav a {
   color: white;
   text-decoration: none;
-  letter-spacing: 1px;
   font-size: 1.05rem;
-  
-  opacity: 1;
+  letter-spacing: 1px;
+  opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
@@ -709,58 +113,176 @@ p {
   opacity: 1;
 }
 
-.hero-global .content h1 {
-  margin: 0;
-  line-height: 1.1;
- font-size: 4.5rem;
-  font-weight: 300;
-white-space: nowrap;
-font-size: clamp(2.5rem, 4vw, 4.5rem);
-}
-
-.hero-global .content p {
-  margin: 10px 0 0 0;
-  opacity: 0.8;
-font-size: 1.1rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+/* =========================
+   SOCIAL HERO
+========================= */
 
 .hero-social {
   position: absolute;
   top: 3%;
-  right: 7.8%;
+  right: 8%;
+  z-index: 3;
 
   display: flex;
   gap: 16px;
-
-  z-index: 3;
 }
 
 .hero-social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0.75;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
-}
-
-.hero-social svg {
-  width: 40px;
-  height: 40px;
-
-  fill: white;
 }
 
 .hero-social a:hover {
   opacity: 1;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  loading: lazy;
+.hero-social svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
 }
 
-<img src="..." loading="lazy">
+/* =========================
+   SEZIONI
+========================= */
+
+.section {
+  padding: 80px;
+}
+
+.section.dark {
+  background: #111;
+}
+
+/* =========================
+   CHAPTER HOME
+========================= */
+
+.chapter {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.media {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.72);
+}
+
+.chapter-text {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  max-width: 600px;
+  color: white;
+}
+
+.chapter-text h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.chapter-text p {
+  margin-bottom: 25px;
+}
+
+.chapter-text a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 4px;
+}
+
+/* =========================
+   PHOTO / EPISODE BLOCK
+========================= */
+
+.photo-block,
+.episode-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 12%;
+}
+
+.photo-block.reverse,
+.episode-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.photo-block img,
+.episode-block img {
+  width: 60%;
+  object-fit: cover;
+}
+
+.photo-text,
+.episode-block div {
+  width: 40%;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.caption {
+  opacity: 0.7;
+  max-width: 700px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 80px;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .photo-block,
+  .episode-block,
+  .photo-block.reverse,
+  .episode-block.reverse {
+    flex-direction: column;
+  }
+
+  .photo-block img,
+  .episode-block img,
+  .photo-text,
+  .episode-block div {
+    width: 100%;
+  }
+
+  .hero-global .content {
+    top: 10%;
+    left: 6%;
+    right: 6%;
+  }
+
+  .hero-nav {
+    top: 18%;
+    left: 6%;
+  }
+
+  .hero-global .content h1 {
+    white-space: normal;
+  }
+}
