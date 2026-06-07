@@ -2,6 +2,10 @@
    BASE
 ========================= */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -41,10 +45,11 @@ p {
 
 .hero-global video {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 0;
 }
@@ -63,11 +68,13 @@ p {
 .hero-global .content {
   position: absolute;
   top: 13%;
-  left: 8%;
   right: 8%;
+  left: auto;
+
   z-index: 2;
   color: white;
   max-width: 600px;
+  text-align: right;
 }
 
 .hero-global .content h1 {
@@ -91,12 +98,17 @@ p {
 .hero-nav {
   position: absolute;
   top: 22%;
-  left: 8%;
+  right: 8%;
+  left: auto;
+
   z-index: 3;
 
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  text-align: right;
+  align-items: flex-end;
 }
 
 .hero-nav a {
@@ -274,11 +286,14 @@ footer {
     top: 10%;
     left: 6%;
     right: 6%;
+    text-align: left;
   }
 
   .hero-nav {
     top: 18%;
     left: 6%;
+    right: auto;
+    align-items: flex-start;
   }
 
   .hero-global .content h1 {
