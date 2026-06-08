@@ -105,6 +105,8 @@ p {
 
   
   margin-top: 18px;
+  align-items: flex-end;
+  padding: 0;
 }
 
 .hero-nav a {
