@@ -28,59 +28,59 @@
 
 <section class="gallery-masonry">
 
-  <img src="assets/images/foto1.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto1.jpg" alt="" loading="lazy" class="gallery-img">
   
-  <img src="assets/images/foto2.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto2.jpg" alt="" loading="lazy" class="gallery-img">
   
-  <img src="assets/images/foto3.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto3.jpg" alt="" loading="lazy" class="gallery-img">
   
-  <img src="assets/images/foto4.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto4.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto5.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto5.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto6.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto6.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto7.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto7.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto8.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto8.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto9.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto9.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto10.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto10.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto11.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto11.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto12.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto12.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto13.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto13.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto14.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto14.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto15.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto15.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto16.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto16.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto17.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto17.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto18.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto18.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto19.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto19.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto20.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto20.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto21.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto21.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto22.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto22.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto23.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto23.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto24.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto24.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto25.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto25.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto26.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto26.jpg" alt="" loading="lazy" class="gallery-img">
 
-  <img src="assets/images/foto27.jpg" alt="" loading="lazy">
+  <img src="assets/images/foto27.jpg" alt="" loading="lazy" class="gallery-img">
 
 
 </section>
@@ -90,6 +90,27 @@
 <footer>
   <p></p>
 </footer>
+
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+const images = document.querySelectorAll('.gallery-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
