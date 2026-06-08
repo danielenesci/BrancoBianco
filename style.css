@@ -371,3 +371,11 @@ footer {
   max-width: 90%;
   max-height: 90%;
 }
+
+.gallery-footer {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
