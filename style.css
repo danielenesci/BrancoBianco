@@ -411,3 +411,46 @@ nav a:active {
   outline: none;
   text-decoration: none;
 }
+
+/* =========================
+   BIO BLOCK
+========================= */
+
+.bio-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.bio-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.bio-text {
+  flex: 1;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.bio-image {
+  flex: 1;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .bio-block,
+  .bio-block.reverse {
+    flex-direction: column;
+  }
+}
