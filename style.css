@@ -422,26 +422,70 @@ nav a:active {
   padding: 80px 20px;
 }
 
-/* TESTO CENTRATO + GIUSTIFICATO */
-.bio-text {
+/* TITOLO CENTRATO */
+.bio h1,
+.bio h2 {
   text-align: center;
-  margin: 60px 0;
+  margin-bottom: 40px;
 }
 
+/* TESTO CENTRATO COME BLOCCO */
+.bio-text {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* PARAGRAFI GIUSTIFICATI DENTRO IL BLOCCO */
 .bio-text p {
   text-align: justify;
+  text-align-last: center; /* ultima riga centrata */
   line-height: 1.9;
   font-size: 1.05rem;
   opacity: 0.85;
 }
 
-/* IMMAGINI CENTRATE E NON FULL WIDTH */
+/* IMMAGINI CENTRATE */
 .bio-image {
   display: block;
   width: 80%;
   max-width: 600px;
 
-  margin: 60px auto;
+  margin: 50px auto;
+}
 
-  border-radius: 2px;
+.bio-strip {
+  display: flex;
+  gap: 15px;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.bio-strip img {
+  width: 33.3%;
+  height: 220px;
+
+  object-fit: cover;
+
+  filter: contrast(1.05) brightness(0.95);
+
+  transition: transform 0.3s ease;
+}
+
+.bio-strip img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .bio-strip {
+    flex-direction: column;
+  }
+
+  .bio-strip img {
+    width: 100%;
+    height: auto;
+  }
 }
