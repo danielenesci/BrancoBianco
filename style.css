@@ -416,34 +416,31 @@ nav a:active {
    BIO BLOCK
 ========================= */
 
-.bio-block {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
+.bio {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
-.bio-block.reverse {
-  flex-direction: row-reverse;
-}
-
+/* TESTO PIÙ ARIOSO */
 .bio-text {
-  flex: 1;
-  line-height: 1.8;
+  margin: 60px 0;
+  font-size: 1.1rem;
+  line-height: 1.9;
   opacity: 0.85;
 }
 
-.bio-image {
-  min-width: 300px;
+/* IMMAGINI “FULL BUT CONTROLLED” */
+.bio-media {
+  margin: 60px 0;
 }
 
-.bio-image img {
+.bio-media img {
   width: 100%;
   height: auto;
   display: block;
+
+  filter: contrast(1.05) brightness(0.95);
 }
 
 /* MOBILE */
