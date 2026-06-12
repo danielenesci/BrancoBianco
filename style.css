@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   background: #0b0f0e;
   color: #eaeaea;
   line-height: 1.6;
@@ -24,13 +24,15 @@ img {
    TIPOGRAFIA
 ========================= */
 
-h1, h2 {
-  font-weight: 300;
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
 p {
-  opacity: 0.8;
+  font-weight: 300;
+  opacity: 0.85;
 }
 
 /* =========================
