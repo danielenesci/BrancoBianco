@@ -491,3 +491,74 @@ footer {
     height: auto;
   }
 }
+
+.activity-block {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding: 90px 10%;
+}
+
+/* TESTO */
+.activity-text {
+  width: 45%;
+}
+
+/* GRIGLIA IMMAGINI */
+.activity-media-grid {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.activity-media-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.activity-media-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* REVERSE */
+.activity-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .activity-block,
+  .activity-block.reverse {
+    flex-direction: column;
+  }
+
+  .activity-text,
+  .activity-media-grid {
+    width: 100%;
+  }
+
+  .activity-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-media-grid img {
+    height: auto;
+  }
+}
+.section a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.section a:visited {
+  color: inherit;
+}
+
+.section a:hover {
+  opacity: 0.8;
+  border-bottom-color: rgba(255,255,255,0.7);
+}
