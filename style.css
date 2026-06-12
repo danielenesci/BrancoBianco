@@ -60,7 +60,7 @@ p {
   inset: 0;
   background: rgba(0,0,0,0.45);
   z-index: 1;
-  pointer-events: none;;
+  pointer-events: none;
 }
 
 /* =========================
@@ -97,7 +97,7 @@ p {
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.85
+  opacity: 0.85;
 }
 
 /* NAV DENTRO FLUSSO (IMPORTANTISSIMO) */
@@ -292,9 +292,6 @@ footer {
   }
 
   .hero-nav {
-    top: 18%;
-    left: 6%;
-    right: auto;
     align-items: flex-start;
   }
 
