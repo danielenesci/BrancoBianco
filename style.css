@@ -562,3 +562,64 @@ footer {
   opacity: 0.8;
   border-bottom-color: rgba(255,255,255,0.7);
 }
+
+/* HERO VIDEO PROGETTO */
+
+.project-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.project-title {
+  position: absolute;
+  bottom: 12%;
+  left: 8%;
+  color: white;
+  max-width: 600px;
+}
+
+.project-title h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.project-title p {
+  opacity: 0.85;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.project-section {
+  padding: 100px 10%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-section h2 {
+  margin-bottom: 20px;
+}
+
+.project-section p {
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+.project-section.dark {
+  background: #0f1413;
+}
