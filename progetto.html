@@ -53,9 +53,7 @@
     Il lavoro si basa su osservazione diretta, fotografia naturalistica, fototrappolaggio e registrazioni bioacustiche, con l’obiettivo di costruire un archivio coerente e continuativo dal 2022.
   </p>
 
-  <p>
-    Non si tratta di una semplice raccolta di immagini, ma di un sistema di lettura del paesaggio e delle dinamiche ecologiche che lo attraversano.
-  </p>
+  
 
 </section>
 
@@ -64,7 +62,12 @@
   <h2>Metodo</h2>
 
   <p>
-    L’approccio combina presenza sul campo e strumenti indiretti di monitoraggio per comprendere pattern di presenza, movimenti e interazioni con l’ambiente.
+    L’approccio combina presenza sul campo continua tramite strumenti indiretti di monitoraggio. L'area di studio è stata suddivisa in stazioni situate in punti di passaggio strategici, individuati nel tempo.
+    Questo permette di osservare interazioni tra i membri del branco e di come cambino l'uso di alcune parti dell'areale durante l'anno; oltre alle dinamiche che intercorrono tra predatore e prede presenti.
+<p>    
+Tutto il materiale viene catalogato in un dateset in costante aggiornamento, in cui vengono annotate date, orari di cattura, nonché caratteristiche dei soggetti se riconosciuti con certezza ed il comporamento osservato.
+</p>   
+
   </p>
 
 </section>
@@ -74,16 +77,123 @@
   <h2>Obiettivo</h2>
 
   <p>
-    Costruire una narrazione visiva coerente che restituisca il rapporto tra il branco e il suo ecosistema nel tempo.
+    Costruire una narrazione visiva coerente che racconti l'evoluzione del branco nel tempo, riconoscendo i soggetti riproduttori adulti, membri subadulti e cuccioli dal periodo della nascita in poi.
   </p>
 
 </section>
 
-</main>
+<section class="project-divider">
+  <p>
+    Di seguito, i singoli capitoli del progetto: individui, eventi osservati e approfondimenti scientifici.
+  </p>
+</section>
+
+<section class="project-index">
+
+  <h3>Sezioni del progetto</h3>
+
+  <ul>
+    <li><a href="#bianca">Femmina riproduttrice</a></li>    
+    <li><a href="#individui">Soggetti riconosciuti</a></li>
+    <li><a href="#eventi">Eventi e osservazioni</a></li>
+    <li><a href="#sovrapposizione">Sovrapposizione con branco confinante</a></li>
+  </ul>
+
+</section>
+
+
+<section class="project-section" id="bianca">
+ 
+
+  <h2>La femmina riproduttrice</h2>
+
+  <p>
+    Osservata fin dalle prime fasi del progetto, rappresenta uno degli individui più facilmente riconoscibili del branco. Le immagini raccolte negli anni hanno permesso di documentarne l'evoluzione, il ruolo nella crescita dei cuccioli e le interazioni con gli altri membri.
+  </p>
+</div>
+
+
+<div class="project-thumb-gallery">
+
+  <img src="assets/images/foto27.jpg" alt="Bianca - Giugno 2024" data-caption="Bianca - Giugno 2024">
+  
+  <img src="assets/images/Bianca2.jpg" alt="Bianca - Giugno 2024" data-caption="Bianca - Giugno 2024">
+ 
+
+</div>
+
+</section>
+
+ 
+<section class="project-section dark" id="individui">
+
+ 
+  <h2>Soggetti riconosciuti</h2>
+
+  <p>
+    Nel corso degli anni alcuni individui sono stati osservati con una certa continuità, permettendo di riconoscerne caratteristiche fisiche, ruoli sociali e cambiamenti nel tempo.
+  </p>
+
+</section>
+
+
+
+<section class="project-section" id="eventi">
+
+  <h2>Eventi e osservazioni</h2>
+
+  <p>
+    Alcuni episodi hanno fornito informazioni particolarmente significative sulla vita del branco, documentando comportamenti insoliti, dinamiche sociali o variazioni nell'utilizzo del territorio.
+  </p>
+
+</section>
+
+
+
+<section class="project-section dark" id="sovrapposizione">
+
+  <h2>Sovrapposizione con branchi confinanti</h2>
+
+  <p>
+    In una stazione situata a 4,5 km dal centro ipotetico del territorio del branco (come centro è stato utilizzato il punto in cui vengono allevati i cuccioli, mai cambiato dall'anno 2022) sono stati rilevati punti di marcatura in cui nei mesi invernali sono stati osservati individui di altri due branchi distinti.
+  </p>
+
+</section>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="">
+    <p id="lightbox-caption"></p>
+  </div>
+</div>
 
 <footer>
   <p>© 2026 Daniele Nesci — Tutti i diritti riservati</p>
 </footer>
+
+<div class="site-banner">
+  Pagina in allestimento
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCaption = document.getElementById("lightbox-caption");
+
+document.querySelectorAll(".project-thumb-gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = img.dataset.caption || "";
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
 
 </body>
 </html>
