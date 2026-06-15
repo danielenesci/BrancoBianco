@@ -242,6 +242,7 @@ p {
    GALLERY
 ========================= */
 
+
 .gallery {
   display: flex;
   flex-direction: column;
