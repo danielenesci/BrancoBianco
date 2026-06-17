@@ -722,18 +722,9 @@ footer {
   transition: 0.3s ease;
 }
 
-.site-banner{
-  position: fixed;
-  top: 0;
-  left: 0;
+.site-banner {
   width: 100%;
-  background: #c9a96e;
-  color: #111;
   text-align: center;
-  padding: 10px 16px;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  z-index: 9999;
 }
 
 body{
