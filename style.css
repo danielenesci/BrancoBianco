@@ -44,6 +44,7 @@ p {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 120px;
 }
 
 .hero-global video {
@@ -175,34 +176,119 @@ p {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+
+  justify-content: flex-start;
+
+  margin-bottom: 140px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+
+  padding: 80px 10%;
+
+  /* sicurezza layering */
+  z-index: 0;
 }
 
-.media {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  filter: brightness(0.72);
-}
-
-.chapter-text {
+/* overlay */
+.chapter::before {
+  content: "";
   position: absolute;
-  left: 10%;
-  bottom: 10%;
-  max-width: 600px;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.10) 0%,
+    
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* contenuto sopra overlay */
+.chapter-text {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  color: white;
+
+  padding-left: 60px; /* 👉 QUESTO è il vero fix */
+}
+
+/* banda dietro il testo */
+
+.chapter-text::before {
+  content: "";
+  position: absolute;
+  
+  left: 0;
+  top: -25px;
+  bottom: -25px;
+
+  width: 120%;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.70) 0%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0) 100%
+  );
+
+  z-index: -1;
+  border-radius: 6px;
+}
+
+
+
+/* IMMAGINE */
+.media {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.02);
+  filter: none;
+
+  z-index: 0;
+}
+
+/* TESTO */
+.chapter-text {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+
   color: white;
 }
 
+/* TITOLI */
 .chapter-text h2 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size: clamp(4.5rem, 8vw, 6.5rem);
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+
+  text-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
+/* TESTO */
 .chapter-text p {
-  margin-bottom: 25px;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  opacity: 0.88;
+
+  max-width: 560px;
+  margin: 0 0 18px 0;
 }
 
+/* LINK */
 .chapter-text a {
   color: white;
   text-decoration: none;
