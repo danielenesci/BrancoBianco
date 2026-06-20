@@ -197,12 +197,11 @@ p {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.45) 60%,
-    rgba(0,0,0,0.10) 0%,
-    
-  );
+background: linear-gradient(
+  to top,
+  rgba(0,0,0,0) 60%,
+  rgba(0,0,0,0) 0%
+);
 
   z-index: 1;
   pointer-events: none;
@@ -212,6 +211,7 @@ p {
 .chapter-text {
   position: relative;
   z-index: 2;
+  
   max-width: 720px;
   color: white;
 
@@ -258,16 +258,6 @@ p {
   filter: none;
 
   z-index: 0;
-}
-
-/* TESTO */
-.chapter-text {
-  position: relative;
-  z-index: 2;
-
-  max-width: 720px;
-
-  color: white;
 }
 
 /* TITOLI */
@@ -717,14 +707,6 @@ footer {
   background: #0f1413;
 }
 
-.science-box{
-    max-width:900px;
-    margin:80px auto;
-    padding:40px;
-    border-left:4px solid #c9a96e;
-    background:#f5f5f5;
-}
-
 .project-divider{
   max-width: 900px;
   margin: 80px auto;
@@ -904,10 +886,6 @@ html{
 }
 
 .project-thumb-gallery img:hover {
-  transform: scale(1.03);
-}
-
-.project-thumb-gallery img:hover {
   transform: scale(1.05);
 }
 
@@ -916,18 +894,6 @@ html{
   margin-top: 6px;
   opacity: 0.7;
   text-align: center;
-}
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  display: none;
-
-  align-items: center;
-  justify-content: center;
-
-  z-index: 9999;
 }
 
 .lightbox-content {
@@ -969,4 +935,13 @@ html{
   font-size: 0.9rem;
   opacity: 0.7;
   text-align: center;
+}
+
+@media (max-width: 900px) {
+
+  .chapter-text h2 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 1;
+  }
+
 }
