@@ -968,3 +968,37 @@ html{
   }
 
 }
+
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:none;
+    border:none;
+
+    color:white;
+    font-size:4rem;
+
+    cursor:pointer;
+
+    opacity:.45;
+    transition:.25s;
+
+    user-select:none;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+    opacity:1;
+}
+
+.lightbox-prev{
+    left:40px;
+}
+
+.lightbox-next{
+    right:40px;
+}

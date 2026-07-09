@@ -85,23 +85,91 @@
 </footer>
 
 <div id="lightbox" class="lightbox">
+
+  <button class="lightbox-prev">&#10094;</button>
+
   <img id="lightbox-img" src="">
+
+  <button class="lightbox-next">&#10095;</button>
+
 </div>
 
 <script>
 const images = document.querySelectorAll('.gallery-img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const prevBtn = document.querySelector('.lightbox-prev');
+const nextBtn = document.querySelector('.lightbox-next');
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
+let currentIndex = 0;
+
+function showImage(index){
+  currentIndex = index;
+  lightboxImg.src = images[currentIndex].src;
+}
+
+images.forEach((img,index)=>{
+
+  img.addEventListener('click',()=>{
+
+    lightbox.style.display='flex';
+    showImage(index);
+
   });
+
+});
+prevBtn.addEventListener('click',(e)=>{
+
+    e.stopPropagation();
+
+    currentIndex=(currentIndex-1+images.length)%images.length;
+    showImage(currentIndex);
+
 });
 
-lightbox.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+nextBtn.addEventListener('click',(e)=>{
+
+    e.stopPropagation();
+
+    currentIndex=(currentIndex+1)%images.length;
+    showImage(currentIndex);
+
+});
+
+document.addEventListener('keydown',(e)=>{
+
+  if(lightbox.style.display!=='flex') return;
+
+  if(e.key==="ArrowRight"){
+
+    currentIndex=(currentIndex+1)%images.length;
+    showImage(currentIndex);
+
+  }
+
+  if(e.key==="ArrowLeft"){
+
+    currentIndex=(currentIndex-1+images.length)%images.length;
+    showImage(currentIndex);
+
+  }
+
+  if(e.key==="Escape"){
+
+    lightbox.style.display='none';
+
+  }
+
+});
+
+lightbox.addEventListener('click',(e)=>{
+
+  if(e.target===lightbox){
+
+    lightbox.style.display='none';
+
+  }
+
 });
 </script>
 
