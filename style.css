@@ -1071,26 +1071,26 @@ html{
 }
 
 
-.gallery-hero-content::before{
 
+.gallery-hero-content::before {
     content:"";
-
     position:absolute;
 
-    left:-70px;
+    left:0px;
     top:-25px;
     bottom:-25px;
 
-    width:130%;
+    width:120%;
 
     background:linear-gradient(
         to right,
-        rgba(0,0,0,.82) 0%,
-        rgba(0,0,0,.60) 55%,
+        rgba(0,0,0,.80) 0%,
+        rgba(0,0,0,.60) 50%,
         rgba(0,0,0,0) 100%
     );
 
     z-index:-1;
+    border-radius:6px;
 }
 
 .gallery-hero-content h1{
