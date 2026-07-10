@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria | White Pack</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="chi-sono.html">Chi sono</a>
+  <a href="progetto.html">White Pack</a>
+  <a href="galleria.html">Galleria</a>
+  <a href="escursioni.html">Attività</a>
+  <a href="contatti.html">Contatti</a>
+</nav>
+
+<header class="page-hero">
+  <h1></h1>
+  <p></p>
+</header>
+
+<main>
+
+<section class="gallery-grid">
+
+  <img src="assets/images/foto1.jpg" class="gallery-img large" loading="lazy">
+  <img src="assets/images/foto2.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto3.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto38.jpg" class="gallery-img wide" loading="lazy">
+
+  <img src="assets/images/foto4.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto5.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto6.jpg" class="gallery-img tall" loading="lazy">
+  <img src="assets/images/foto7.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto8.jpg" class="gallery-img large" loading="lazy">
+  <img src="assets/images/foto9.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto10.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto11.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto13.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto14.jpg" class="gallery-img wide" loading="lazy">
+  <img src="assets/images/foto15.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto16.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto17.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto19.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto20.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto21.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto22.jpg" class="gallery-img wide" loading="lazy">
+  <img src="assets/images/foto23.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto24.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto25.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto26.jpg" class="gallery-img large" loading="lazy">
+  <img src="assets/images/foto27.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto28.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto29.jpg" class="gallery-img large" loading="lazy">
+  <img src="assets/images/foto30.jpg" class="gallery-img wide" loading="lazy">
+  <img src="assets/images/foto31.jpg" class="gallery-img" loading="lazy">
+
+  <img src="assets/images/foto32.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto33.jpg" class="gallery-img wide" loading="lazy">
+  <img src="assets/images/foto34.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto35.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto37.jpg" class="gallery-img" loading="lazy">
+  <img src="assets/images/foto36.jpg" class="gallery-img wide" loading="lazy">
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Daniele Nesci — Tutti i diritti riservati</p>
+</footer>
+
+<div id="lightbox" class="lightbox">
+
+  <button class="lightbox-prev">&#10094;</button>
+
+  <img id="lightbox-img" src="">
+
+  <button class="lightbox-next">&#10095;</button>
+
+</div>
+
+<script>
+const images = document.querySelectorAll('.gallery-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const prevBtn = document.querySelector('.lightbox-prev');
+const nextBtn = document.querySelector('.lightbox-next');
+
+let currentIndex = 0;
+
+function showImage(index){
+  currentIndex = index;
+  lightboxImg.src = images[currentIndex].src;
+}
+
+images.forEach((img,index)=>{
+
+  img.addEventListener('click',()=>{
+
+    lightbox.style.display='flex';
+    showImage(index);
+
+  });
+
+});
+prevBtn.addEventListener('click',(e)=>{
+
+    e.stopPropagation();
+
+    currentIndex=(currentIndex-1+images.length)%images.length;
+    showImage(currentIndex);
+
+});
+
+nextBtn.addEventListener('click',(e)=>{
+
+    e.stopPropagation();
+
+    currentIndex=(currentIndex+1)%images.length;
+    showImage(currentIndex);
+
+});
+
+document.addEventListener('keydown',(e)=>{
+
+  if(lightbox.style.display!=='flex') return;
+
+  if(e.key==="ArrowRight"){
+
+    currentIndex=(currentIndex+1)%images.length;
+    showImage(currentIndex);
+
+  }
+
+  if(e.key==="ArrowLeft"){
+
+    currentIndex=(currentIndex-1+images.length)%images.length;
+    showImage(currentIndex);
+
+  }
+
+  if(e.key==="Escape"){
+
+    lightbox.style.display='none';
+
+  }
+
+});
+
+lightbox.addEventListener('click',(e)=>{
+
+  if(e.target===lightbox){
+
+    lightbox.style.display='none';
+
+  }
+
+});
+</script>
+
+</body>
+</html>
