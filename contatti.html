@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <title>Contatti | White Pack</title>
   <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,14 +19,31 @@
   <a href="progetto.html">White Pack</a>
   <a href="galleria.html">Galleria</a>
   <a href="escursioni.html">Attività</a>
-  <a href="contatti.html">Contatti</a>
+  <a href="contatti.html" class="active">Contatti</a>
 </nav>
 
 <section class="section">
 
   <h1>Contatti</h1>
+  <p>Hai domande, richieste o vuoi collaborare? Compila il modulo qui sotto.</p>
 
-  <p>Email: dani.nesci@hotmail.it</p>
+  <form action="send-mail.php" method="POST" class="contact-form">
+
+    <label>Nome</label>
+    <input type="text" name="nome" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Messaggio</label>
+    <textarea name="messaggio" rows="6" required></textarea>
+
+    <!-- HONEYPOT INVISIBILE -->
+    <input type="text" name="website" class="hp-field">
+
+    <button type="submit">Invia richiesta</button>
+
+  </form>
 
 </section>
 
