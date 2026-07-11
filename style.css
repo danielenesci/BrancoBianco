@@ -209,13 +209,14 @@ background: linear-gradient(
 
 /* contenuto sopra overlay */
 .chapter-text {
+  transform: translateX(-70px);
   position: relative;
   z-index: 2;
   
   max-width: 720px;
   color: white;
 
-  padding-left: 60px; /* 👉 QUESTO è il vero fix */
+  padding-left: 40px; /* 👉 QUESTO è il vero fix */
   padding-bottom: 30px; /* 👉 spazio per il link */
 }
 
@@ -225,11 +226,11 @@ background: linear-gradient(
   content: "";
   position: absolute;
   
-  left: 0;
+  left: -80px;     /* prima era 0 → ora parte più a sinistra */
   top: -25px;
   bottom: -25px;
 
-  width: 120%;
+  width: 160%;     /* prima era 144% → ora copre meglio il testo */
 
   background: linear-gradient(
     to right,
@@ -1046,6 +1047,7 @@ html{
 
 
 .gallery-hero-content{
+    transform: translateX(35px);
     position:absolute;
 
     left:3%;
@@ -1076,11 +1078,11 @@ html{
     content:"";
     position:absolute;
 
-    left:0px;
+    left:-25px;
     top:-25px;
     bottom:-25px;
 
-    width:120%;
+    width:160%;
 
     background:linear-gradient(
         to right,
