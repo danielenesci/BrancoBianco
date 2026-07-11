@@ -27,8 +27,16 @@
   <h1>Contatti</h1>
   <p>Hai domande, richieste o vuoi collaborare? Compila il modulo qui sotto.</p>
 
-  <form action="form-handler.php" method="POST" class="contact-form">
+  <form id="contactForm" action="https://formsubmit.co/ajax/dani.nesci@hotmail.it" method="POST" class="contact-form">
 
+    <!-- Honeypot invisibile -->
+    <input type="text" name="_honey" style="display:none">
+
+    <!-- Disattiva captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- FormSubmit deve rispondere in JSON -->
+    <input type="hidden" name="_template" value="table">
 
     <label>Nome</label>
     <input type="text" name="nome" required>
@@ -39,14 +47,43 @@
     <label>Messaggio</label>
     <textarea name="messaggio" rows="6" required></textarea>
 
-    <!-- HONEYPOT INVISIBILE -->
-    <input type="text" name="website" class="hp-field">
-
     <button type="submit">Invia richiesta</button>
+</form>
 
-  </form>
+<!-- Box conferma -->
+<div id="confirmBox" class="contact-success" style="display:none;">
+    <h2>Messaggio inviato</h2>
+    <p>Grazie, ho ricevuto la tua richiesta.<br>Ti risponderò il prima possibile.</p>
+    <a href="index.html" class="back-home">Torna alla Home</a>
+</div>
+
 
 </section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+    })
+    .then(response => {
+        if (response.ok) {
+            form.style.display = "none"; // nasconde il form
+            document.getElementById("confirmBox").style.display = "block"; // mostra conferma
+        } else {
+            alert("Errore nell'invio. Riprova più tardi.");
+        }
+    })
+    .catch(error => {
+        alert("Errore di connessione.");
+    });
+});
+</script>
+
 
 </body>
 </html>
