@@ -686,6 +686,70 @@ footer {
   border-bottom-color: rgba(255,255,255,0.7);
 }
 
+/* =========================
+   MOBILE UNIFORM FIX
+========================= */
+
+@media (max-width: 900px) {
+
+  /* CHAPTER HOME */
+  .chapter {
+    padding: 60px 6%;
+    margin-bottom: 100px;
+  }
+
+  .chapter-text {
+    transform: translateX(0); /* niente spostamento su mobile */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .chapter-text::before {
+    left: -20px;
+    width: 130%;
+  }
+
+  /* GALLERY HERO */
+.gallery-hero {
+    height: 55vh;
+}
+
+.gallery-hero-content {
+    transform: translateX(0);
+    left: 3%;
+    bottom: 6%;
+    max-width: 94%;
+    padding: 22px 24px;
+}
+
+.gallery-hero-content::before {
+    left: -15px;
+    width: 120%;
+}
+
+  /* SECTION GENERALE */
+  .section {
+    padding: 60px 6%;
+  }
+
+  /* BIO / TESTI INTERNI */
+  .bio {
+    padding: 60px 20px;
+  }
+
+  .bio-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 20px;
+    font-size: 0.75rem;
+  }
+}
+
+
 /* HERO VIDEO PROGETTO */
 
 .project-hero {
@@ -829,9 +893,7 @@ footer {
   text-align: center;
 }
 
-body{
-  padding-top: 40px;
-}
+
 
 .project-index{
   max-width: 900px;
@@ -1045,20 +1107,17 @@ html{
 }
 
 
-
-.gallery-hero-content{
-    transform: translateX(35px);
+.gallery-hero-content {
+    transform: translateX(-70px);
     position:absolute;
-
     left:3%;
     bottom:10%;
-
     max-width:650px;
-
     color:white;
-
     padding:35px 55px 35px 45px;
+    z-index: 2;
 }
+
 
 .gallery-hero-overlay {
   position: absolute;
@@ -1067,30 +1126,20 @@ html{
   z-index: 1;
 }
 
-.gallery-hero-content {
-  position: absolute;
-  z-index: 2;
-}
-
-
 
 .gallery-hero-content::before {
     content:"";
     position:absolute;
-
-    left:-25px;
+    left:-80px;
     top:-25px;
     bottom:-25px;
-
     width:160%;
-
     background:linear-gradient(
         to right,
         rgba(0,0,0,.80) 0%,
         rgba(0,0,0,.60) 50%,
         rgba(0,0,0,0) 100%
     );
-
     z-index:-1;
     border-radius:6px;
 }
