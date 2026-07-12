@@ -226,7 +226,7 @@ background: linear-gradient(
   content: "";
   position: absolute;
   
-  left: -80px;     /* prima era 0 → ora parte più a sinistra */
+  left: -130px;     /* prima era 0 → ora parte più a sinistra */
   top: -25px;
   bottom: -25px;
 
@@ -705,7 +705,7 @@ footer {
   }
 
   .chapter-text::before {
-    left: -20px;
+    left: -50px;
     width: 130%;
   }
 
@@ -714,18 +714,36 @@ footer {
     height: 55vh;
 }
 
-.gallery-hero-content {
-    transform: translateX(0);
-    left: 3%;
-    bottom: 6%;
-    max-width: 94%;
-    padding: 22px 24px;
+ /* Assicura che il contenuto non esca dal viewport */
+  .gallery-hero-content {
+    position: relative;            /* evita che l'absolute del genitore lo sposti fuori */
+    left: 3%;                      /* conserva l'offset visivo */
+    right: 3%;                     /* impedisce overflow a destra */
+    transform: translateX(0) !important;
+    max-width: calc(100% - 6%);    /* 100% meno left+right */
+    padding: 18px 20px;            /* riduce padding per schermi stretti */
+    box-sizing: border-box;
+    z-index: 2;
+    overflow-wrap: anywhere;       /* forza il wrapping delle parole lunghe */
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Riduci dimensione titoli e paragrafi per mobile */
+  .gallery-hero-content h1 {
+    font-size: clamp(1.8rem, 6.5vw, 2.8rem);
+    line-height: 1.05;
+    margin: 0 0 10px;
+  }
+
+  .gallery-hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
 }
 
-.gallery-hero-content::before {
-    left: -15px;
-    width: 120%;
-}
+
 
   /* SECTION GENERALE */
   .section {
@@ -1108,7 +1126,7 @@ html{
 
 
 .gallery-hero-content {
-    transform: translateX(-70px);
+    transform: translateX(-40px);
     position:absolute;
     left:3%;
     bottom:10%;
