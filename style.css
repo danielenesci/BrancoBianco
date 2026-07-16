@@ -537,154 +537,6 @@ footer {
   border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
-/* =========================
-   BIO BLOCK
-========================= */
-
-.bio {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-/* TITOLO CENTRATO */
-.bio h1,
-.bio h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* TESTO CENTRATO COME BLOCCO */
-.bio-text {
-  text-align: center;
-  margin: 40px 0;
-}
-
-/* PARAGRAFI GIUSTIFICATI DENTRO IL BLOCCO */
-.bio-text p {
-  text-align: justify;
-  text-align-last: center; /* ultima riga centrata */
-  line-height: 1.9;
-  font-size: 1.05rem;
-  opacity: 0.85;
-}
-
-/* IMMAGINI CENTRATE */
-.bio-image {
-  display: block;
-  width: 80%;
-  max-width: 600px;
-
-  margin: 50px auto;
-}
-
-.bio-strip {
-  display: flex;
-  gap: 15px;
-
-  justify-content: center;
-  align-items: center;
-
-  margin: 60px auto;
-  max-width: 900px;
-}
-
-.bio-strip img {
-  width: 33.3%;
-  height: 220px;
-
-  object-fit: cover;
-
-  filter: contrast(1.05) brightness(0.95);
-
-  transition: transform 0.3s ease;
-}
-
-.bio-strip img:hover {
-  transform: scale(1.03);
-}
-
-@media (max-width: 900px) {
-  .bio-strip {
-    flex-direction: column;
-  }
-
-  .bio-strip img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.activity-block {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  padding: 90px 10%;
-}
-
-/* TESTO */
-.activity-text {
-  width: 45%;
-}
-
-/* GRIGLIA IMMAGINI */
-.activity-media-grid {
-  width: 55%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.activity-media-grid img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.activity-media-grid img:hover {
-  transform: scale(1.03);
-}
-
-/* REVERSE */
-.activity-block.reverse {
-  flex-direction: row-reverse;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .activity-block,
-  .activity-block.reverse {
-    flex-direction: column;
-  }
-
-  .activity-text,
-  .activity-media-grid {
-    width: 100%;
-  }
-
-  .activity-media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .activity-media-grid img {
-    height: auto;
-  }
-}
-.section a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.35);
-}
-
-.section a:visited {
-  color: inherit;
-}
-
-.section a:hover {
-  opacity: 0.8;
-  border-bottom-color: rgba(255,255,255,0.7);
-}
 
 /* =========================
    MOBILE UNIFORM FIX
@@ -768,14 +620,8 @@ footer {
 }
 
 
-/* HERO VIDEO PROGETTO */
+/* pagina PROGETTO */
 
-.project-hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
 
 .project-video {
   position: absolute;
@@ -785,18 +631,54 @@ footer {
   object-fit: cover;
 }
 
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+.project-title{
+
+    position:absolute;
+
+    left:8%;
+    bottom:12%;
+
+    max-width:650px;
+
+    color:white;
+
+    z-index:10;
+
+    padding:30px 45px 30px 0;
+
 }
 
-.project-title {
-  position: absolute;
-  bottom: 12%;
-  left: 8%;
-  color: white;
-  max-width: 600px;
+.project-title::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-170px;
+    top:0px;
+    bottom:-54px;
+
+    width:220%;
+
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.60) 45%,
+        rgba(0,0,0,0) 95%
+    );
+
+    z-index:-1;
+
+}
+
+.project-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
 }
 
 .project-title h1 {
@@ -814,6 +696,7 @@ footer {
   padding: 100px 10%;
   max-width: 900px;
   margin: auto;
+  
 }
 
 .project-section h2 {
@@ -1100,6 +983,46 @@ html{
     right:40px;
 }
 
+.project-hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+.project-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    z-index:2;
+}
+
+.project-title{
+    position:absolute;
+
+    left:8%;
+    top:76%;
+    transform:translateY(-50%);
+
+    max-width:650px;
+
+    color:white;
+
+    z-index:3;
+
+    padding:30px 45px 30px 0;
+}
+
+
+
 /* =========================
    HERO GALLERIA
 ========================= */
@@ -1155,8 +1078,8 @@ html{
     background:linear-gradient(
         to right,
         rgba(0,0,0,.80) 0%,
-        rgba(0,0,0,.60) 50%,
-        rgba(0,0,0,0) 100%
+        rgba(0,0,0,.80) 58%,
+        rgba(0,0,0,0) 80%
     );
     z-index:-1;
     border-radius:6px;
@@ -1282,3 +1205,225 @@ html{
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* =========================
+   BIO BLOCK
+========================= */
+
+.bio {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* TITOLO CENTRATO */
+.bio h1,
+.bio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* TESTO CENTRATO COME BLOCCO */
+.bio-text {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* PARAGRAFI GIUSTIFICATI DENTRO IL BLOCCO */
+.bio-text p {
+  text-align: justify;
+  text-align-last: center; /* ultima riga centrata */
+  line-height: 1.9;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* IMMAGINI CENTRATE */
+.bio-image {
+  display: block;
+  width: 80%;
+  max-width: 600px;
+
+  margin: 50px auto;
+}
+
+.bio-strip {
+  display: flex;
+  gap: 15px;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.bio-strip img {
+  width: 33.3%;
+  height: 220px;
+
+  object-fit: cover;
+
+  filter: contrast(1.05) brightness(0.95);
+
+  transition: transform 0.3s ease;
+}
+
+.bio-strip img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .bio-strip {
+    flex-direction: column;
+  }
+
+  .bio-strip img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.activity-block {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  padding: 90px 10%;
+}
+
+/* TESTO */
+.activity-text {
+  width: 45%;
+}
+
+/* GRIGLIA IMMAGINI */
+.activity-media-grid {
+  width: 55%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.activity-media-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.activity-media-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* REVERSE */
+.activity-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .activity-block,
+  .activity-block.reverse {
+    flex-direction: column;
+  }
+
+  .activity-text,
+  .activity-media-grid {
+    width: 100%;
+  }
+
+  .activity-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-media-grid img {
+    height: auto;
+  }
+}
+.section a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.section a:visited {
+  color: inherit;
+}
+
+.section a:hover {
+  opacity: 0.8;
+  border-bottom-color: rgba(255,255,255,0.7);
+}
+
+/* Forza il contenuto a partire sotto l'hero (pagina Chi Sono) */
+:root {
+  --site-nav-height: 0px; /* se la nav è fixed, imposta qui l'altezza es. 72px */
+}
+
+/* Assicura che l'hero occupi la viewport */
+.page-chi-sono .chi-sono-hero {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Titolo rimane sovrapposto */
+.page-chi-sono .chi-sono-hero .project-title {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Forza il primo elemento dopo l'hero a partire sotto di esso */
+.page-chi-sono .chi-sono-hero + * {
+  margin-top: calc(0vh - var(--site-nav-height));
+  position: relative;
+  z-index: 1;
+}
+
+/* Se il primo elemento è .bio, mantieni il padding interno originale */
+.page-chi-sono .chi-sono-hero + .bio {
+  padding-top: 24px;
+}
+
+/* Overlay SOLO dietro al titolo */
+.page-chi-sono .chi-sono-hero .project-title {
+  position: absolute;
+  bottom: 12%;
+  left: 8%;
+  max-width: 720px;
+  color: #ffffff;
+  z-index: 2;
+  text-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* Mini-overlay dietro al testo */
+.page-chi-sono .chi-sono-hero .project-title::before {
+  content: "";
+  position: absolute;
+  
+  left: -160px;     /* prima era 0 → ora parte più a sinistra */
+  top: -25px;
+  bottom: -25px;
+
+  width: 250%;     /* prima era 144% → ora copre meglio il testo */
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.80) 0%,
+    rgba(0,0,0,0.60) 50%,
+    rgba(0,0,0,0) 93%
+  );
+
+  z-index: -1;
+  border-radius: 6px;
+}
+
+
+
+/* Variante per ridurre lo spazio su desktop (opzionale) */
+@media (min-width: 901px) {
+  /* Se vuoi che il contenuto inizi leggermente più in alto rispetto al fondo dell'hero,
+     imposta qui un offset negativo (es. -120px) o modifica la formula sopra. */
+  /* .page-chi-sono .chi-sono-hero + * { margin-top: calc(100vh - 120px - var(--site-nav-height)); } */
+}
