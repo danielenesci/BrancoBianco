@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://danielenesci.it/sitemap.xml
