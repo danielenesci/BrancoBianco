@@ -40,6 +40,10 @@ body {
   line-height: 1.7;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1116,6 +1120,8 @@ p {
 
   letter-spacing:2px;
 
+  font-size: 1.35rem;
+
 }
 
 
@@ -1793,6 +1799,19 @@ footer {
   white-space:normal;
 
 }
+
+.main-nav {
+    gap: 10px;
+    padding: 18px 2%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .main-nav a {
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
 
 
 .hero-nav {
