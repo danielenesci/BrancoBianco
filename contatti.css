@@ -1,0 +1,131 @@
+/* =========================
+   CONTATTI
+========================= */
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+  max-width: 650px;
+
+  margin: 60px auto;
+
+  padding: 40px;
+
+  background: #0f1413;
+
+  border-radius: 8px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background: #111;
+
+  border:
+    1px solid #333;
+
+  border-radius: 6px;
+
+  color: #eaeaea;
+
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+
+  outline: none;
+}
+
+.contact-form button {
+  padding: 14px 20px;
+
+  background: var(--accent);
+
+  color: #111;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+  background: #eaeaea;
+}
+
+
+/* =========================
+   MESSAGGI
+========================= */
+
+.contact-success,
+.contact-error {
+  max-width: 650px;
+
+  margin: 80px auto;
+
+  padding: 40px;
+
+  background: #111;
+
+  border-left:
+    4px solid var(--accent);
+
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.contact-success h2,
+.contact-error h2 {
+  font-family:
+    "Playfair Display", serif;
+
+  font-size: 2rem;
+}
+
+
+/* =========================
+   ANIMAZIONE CONFERMA
+========================= */
+
+#confirmBox {
+  animation:
+    confirmFadeIn .6s ease forwards;
+}
+
+@keyframes confirmFadeIn {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}

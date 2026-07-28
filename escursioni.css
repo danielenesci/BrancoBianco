@@ -1,0 +1,227 @@
+/* =========================
+   ATTIVITÀ
+========================= */
+
+
+/* =========================
+   HERO
+========================= */
+
+.activity-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+
+/* IMMAGINE HERO */
+
+.activity-hero .project-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+
+/* OVERLAY */
+
+.activity-hero .project-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0);
+
+  z-index: 2;
+}
+
+
+/* TITOLO HERO */
+
+.activity-hero .project-title {
+  position: absolute;
+
+  left: 4%;
+  top: 50%;
+
+  transform: translateY(0%);
+
+  max-width: 650px;
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-right: 45px;
+
+  color: white;
+
+  z-index: 3;
+}
+
+
+/* GRADIENTE DIETRO AL TITOLO */
+
+.activity-hero .project-title::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -30px -120px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.55) 55%,
+      rgba(0,0,0,0)
+    );
+
+  z-index: -1;
+}
+
+
+/* TITOLO */
+
+.activity-hero .project-title h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+
+/* SOTTOTITOLO */
+
+.activity-hero .project-title p {
+  opacity: .85;
+  letter-spacing: 2px;
+  font-size: 1.35rem;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   BLOCCHI ATTIVITÀ
+========================= */
+
+.activity-block {
+  display: flex;
+
+  gap: 60px;
+
+  align-items: flex-start;
+
+  padding: 90px 10%;
+}
+
+.activity-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.activity-text {
+  width: 45%;
+}
+
+.activity-media-grid {
+  width: 55%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.activity-media-grid img {
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+
+  transition: transform .3s ease;
+}
+
+.activity-media-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  /* HERO */
+
+  .activity-hero {
+    height: 30vh;
+    min-height: 400px;
+  }
+
+
+  /* TITOLO HERO */
+
+  .activity-hero .project-title {
+    left: 4%;
+    right: 4%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    max-width: none;
+
+    min-height: 0;
+
+    padding: 25px 20px;
+  }
+
+
+  .activity-hero .project-title h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .activity-hero .project-title p {
+    font-size: 1rem;
+  }
+
+
+  /* GRADIENTE */
+
+  .activity-hero .project-title::before {
+    inset: -20px -60px;
+  }
+
+
+  /* BLOCCHI */
+
+  .activity-block,
+  .activity-block.reverse {
+    flex-direction: column;
+  }
+
+  .activity-text,
+  .activity-media-grid {
+    width: 100%;
+  }
+
+  .activity-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-media-grid img {
+    height: auto;
+  }
+
+}
