@@ -1,0 +1,276 @@
+/* =========================
+   SLIDER BIANCA
+========================= */
+
+
+.bianca-slider {
+
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 80px auto;
+
+  overflow: hidden;
+
+}
+
+
+
+.slider-track {
+
+  position: relative;
+
+}
+
+.slider-track {
+
+  position:relative;
+
+  min-height:70vh;
+
+}
+
+
+
+.slide {
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:opacity .8s ease;
+
+  margin:0;
+
+}
+
+
+.slide.active {
+
+  position:relative;
+
+  opacity:1;
+
+  pointer-events:auto;
+
+}
+
+
+
+.slide img {
+
+  width:100%;
+
+  height:70vh;
+
+  object-fit:cover;
+
+  cursor:pointer;
+
+  transition:transform 1.2s ease;
+
+}
+
+
+.slide.active img {
+
+  transform:scale(1.02);
+
+}
+
+
+.slide figcaption {
+
+  margin-top: 15px;
+
+  text-align: center;
+
+  font-size: .95rem;
+
+  opacity: .75;
+
+}
+
+
+
+/* FRECCE */
+
+.slider-btn {
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+
+  width: 55px;
+
+  height: 55px;
+
+
+  border: none;
+
+  border-radius: 50%;
+
+
+  background: rgba(0,0,0,.45);
+
+  color:white;
+
+
+  font-size: 2rem;
+
+  cursor:pointer;
+
+
+  z-index:10;
+
+  transition:.3s ease;
+
+}
+
+
+
+.slider-btn:hover {
+
+  background: rgba(0,0,0,.8);
+
+}
+
+
+
+.slider-btn.prev {
+
+  left:20px;
+
+}
+
+
+
+.slider-btn.next {
+
+  right:20px;
+
+}
+
+
+
+/* PALLINI */
+
+.slider-dots {
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:10px;
+
+  margin-top:25px;
+
+}
+
+
+
+.slider-dots span {
+
+  width:10px;
+
+  height:10px;
+
+
+  border-radius:50%;
+
+
+  background:#555;
+
+  cursor:pointer;
+
+}
+
+
+
+.slider-dots span.active {
+
+  background:#fff;
+
+}
+
+
+
+/* ANIMAZIONE */
+
+@keyframes slideFade {
+
+  from {
+
+    opacity:0;
+
+    transform:translateX(20px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+
+  .bianca-slider {
+
+    margin:50px auto;
+
+  }
+
+
+  .slide img {
+
+    height:45vh;
+
+  }
+
+
+  .slider-btn {
+
+    width:42px;
+
+    height:42px;
+
+    font-size:1.4rem;
+
+  }
+
+
+  .slider-btn.prev {
+
+    left:10px;
+
+  }
+
+
+  .slider-btn.next {
+
+    right:10px;
+
+  }
+
+}

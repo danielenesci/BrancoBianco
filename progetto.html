@@ -24,6 +24,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="progetto.css">
+  <link rel="stylesheet" href="slider.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,36 +137,47 @@ Tutto il materiale viene catalogato in un dateset in costante aggiornamento, in 
     Bianca, osservata fin dalle prime fasi del progetto (2022), rappresenta uno degli individui più facilmente riconoscibili di tutto il branco.  Le immagini raccolte negli anni hanno permesso di documentarne la presenza costante come caposaldo della famiglia anche durante i ritmi invernali; il ruolo nella crescita dei cuccioli e le interazioni con gli altri membri.
   </p>
 
+</section>
 
 
-<section class="bianca-story">
+<section class="bianca-slider">
 
-  <figure class="bianca-shot">
-    <img src="assets/images/foto27.jpg" alt="Bianca, femmina riproduttrice del branco, giugno 2024">
-    <figcaption>Bianca - Giugno 2024</figcaption>
-  </figure>
+<button class="slider-btn prev">&#10094;</button>
 
-  <figure class="bianca-shot">
-    <img src="assets/images/Bianca2.jpg" alt="Bianca - Giugno 2024">
-    <figcaption>Bianca - Giugno 2024</figcaption>
-  </figure>
+<div class="slider-track">
 
-  <figure class="bianca-shot">
-    <img src="assets/images/Bianca3.jpg" alt="Bianca gravida - Aprile 2024">
-    <figcaption>Bianca gravida - Aprile 2024</figcaption>
-  </figure>
+    <figure class="slide active">
+      <img src="assets/images/foto27.jpg" alt="Bianca, femmina riproduttrice del branco, giugno 2024">
+      <figcaption>Bianca - Giugno 2024</figcaption>
+    </figure>
 
-  <figure class="bianca-shot">
+    <figure class="slide">
+      <img src="assets/images/Bianca2.jpg" alt="Bianca, femmina riproduttrice del branco, giugno 2024">
+      <figcaption>Bianca - Giugno 2024</figcaption>
+    </figure>
+
+    <figure class="slide">
+      <img src="assets/images/Bianca3.jpg" alt="Bianca gravida - Aprile 2024">
+      <figcaption>Bianca gravida - Aprile 2024</figcaption>
+    </figure>
+
+  <figure class="slide">
     <img src="assets/images/Bianca4.jpg" alt="Bianca ed Ercole - Agosto 2023">
     <figcaption>Bianca ed Ercole - Agosto 2023</figcaption>
   </figure>
 
-  <figure class="bianca-shot">
+  <figure class="slide">
     <img src="assets/images/Bianca5.jpg" alt="Bianca - Agosto 2022">
     <figcaption>Bianca - Agosto 2022</figcaption>
   </figure>
 
+  </div>
+
+  <button class="slider-btn next">&#10095;</button>
+
 </section>
+
+<div class="slider-dots"></div>
 
  
 <section class="project-section dark" id="individui">
@@ -218,22 +230,28 @@ Tutto il materiale viene catalogato in un dateset in costante aggiornamento, in 
 
 
 <script>
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const lightboxCaption = document.getElementById("lightbox-caption");
 
-document.querySelectorAll(".bianca-story img").forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-    lightboxCaption.textContent = img.dataset.caption || "";
-  });
-});
+document.querySelectorAll(".bianca-slider img").forEach(img => {
 
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
+  img.addEventListener("click", () => {
+
+    lightbox.style.display = "flex";
+
+    lightboxImg.src = img.src;
+
+    lightboxCaption.textContent =
+    img.parentElement.querySelector("figcaption").textContent;
+
+  });
+
 });
 </script>
+
+<script src="slider.js"></script>
 
 </body>
 </html>
