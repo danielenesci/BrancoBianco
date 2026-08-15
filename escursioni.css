@@ -4,21 +4,27 @@
 
 
 /* =========================
-   HERO
+   HERO PRINCIPALE
 ========================= */
 
 .activity-hero {
+
   position: relative;
+
   height: 70vh;
   min-height: 480px;
+
   overflow: hidden;
+
 }
 
 
 /* IMMAGINE HERO */
 
 .activity-hero .project-video {
+
   position: absolute;
+
   inset: 0;
 
   width: 100%;
@@ -27,50 +33,63 @@
   object-fit: cover;
 
   z-index: 1;
+
 }
 
 
-/* OVERLAY */
+/* OVERLAY HERO */
 
 .activity-hero .project-overlay {
+
   position: absolute;
+
   inset: 0;
 
   background: rgba(0,0,0,0);
 
   z-index: 2;
+
 }
 
 
 /* TITOLO HERO */
 
 .activity-hero .project-title {
+
   position: absolute;
 
   left: 4%;
   top: 50%;
 
-  transform: translateY(0%);
+  transform: translateY(-50%);
 
   max-width: 650px;
+
   min-height: 180px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: flex-start;
 
   padding-right: 45px;
 
   color: white;
 
+  text-align: left;
+
   z-index: 3;
+
 }
 
 
-/* GRADIENTE DIETRO AL TITOLO */
+/* GRADIENTE HERO */
 
 .activity-hero .project-title::before {
+
   content: "";
 
   position: absolute;
@@ -86,94 +105,251 @@
     );
 
   z-index: -1;
+
 }
 
 
 /* TITOLO */
 
 .activity-hero .project-title h1 {
-  font-size: 4rem;
+
   margin: 0;
+
+  font-size: 4rem;
+
 }
 
 
 /* SOTTOTITOLO */
 
 .activity-hero .project-title p {
+
+  margin: 10px 0 0;
+
   opacity: .85;
+
   letter-spacing: 2px;
+
   font-size: 1.35rem;
-  margin-top: 10px;
+
 }
 
 
-/* =========================
+/* ==================================================
    BLOCCHI ATTIVITÀ
-========================= */
+================================================== */
 
 .activity-block {
-  display: flex;
+  position: relative;
+  width: 100%;
+  height: 600px;
 
-  gap: 60px;
+  margin: 100px 0 100px;
 
-  align-items: flex-start;
+  padding: 0;
 
-  padding: 90px 10%;
+  overflow: hidden;
 }
 
-.activity-block.reverse {
-  flex-direction: row-reverse;
-}
 
-.activity-text {
-  width: 45%;
-}
+/* ==================================================
+   IMMAGINE
+================================================== */
 
 .activity-media-grid {
-  width: 55%;
 
-  display: grid;
+  position: absolute;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+  inset: 0;
 
-  gap: 12px;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+
 }
 
-.activity-media-grid img {
-  width: 100%;
 
-  height: 240px;
+/* IMMAGINE */
+
+.activity-media-grid img {
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
 
   object-fit: cover;
 
-  transition: transform .3s ease;
+  transition: transform .5s ease;
+
 }
 
-.activity-media-grid img:hover {
+
+/* Mostra solo la prima immagine */
+
+.activity-media-grid img:not(:first-child) {
+
+  display: none;
+
+}
+
+
+/* Leggero zoom */
+
+.activity-block:hover
+.activity-media-grid img:first-child {
+
   transform: scale(1.03);
+
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ==================================================
+   GRADIENTE SOPRA L'IMMAGINE
+================================================== */
+
+.activity-block::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,.85) 0%,
+      rgba(0,0,0,.65) 30%,
+      rgba(0,0,0,.30) 55%,
+      rgba(0,0,0,0) 80%
+    );
+
+  z-index: 1;
+
+  pointer-events: none;
+
+}
+
+
+/* ==================================================
+   TESTO SOPRA L'IMMAGINE
+================================================== */
+
+.activity-text {
+
+  position: absolute;
+
+  left: 8%;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 45%;
+
+  max-width: 700px;
+
+  padding: 0;
+
+  margin: 0;
+
+  color: white;
+
+  text-align: left;
+
+  z-index: 2;
+
+}
+
+
+/* TITOLO */
+
+.activity-text h2 {
+
+  margin: 0 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+}
+
+
+/* PARAGRAFO */
+
+.activity-text p {
+
+  max-width: 650px;
+
+  margin: 0 0 20px;
+
+  font-size: 1.15rem;
+
+  line-height: 1.8;
+
+}
+
+
+/* LISTA */
+
+.activity-text ul {
+
+  max-width: 650px;
+
+  margin: 15px 0 0;
+
+  padding-left: 20px;
+
+}
+
+
+.activity-text li {
+
+  margin-bottom: 6px;
+
+}
+
+
+/* LINK */
+
+.activity-text a {
+
+  color: white;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 900px) {
+
 
   /* HERO */
 
   .activity-hero {
-    height: 30vh;
+
+    height: 50vh;
+
     min-height: 400px;
+
   }
 
 
-  /* TITOLO HERO */
-
   .activity-hero .project-title {
-    left: 4%;
-    right: 4%;
+
+    left: 6%;
+
+    right: 6%;
 
     top: 50%;
 
@@ -183,45 +359,152 @@
 
     min-height: 0;
 
-    padding: 25px 20px;
+    padding: 20px;
+
   }
 
 
   .activity-hero .project-title h1 {
+
     font-size: 2.5rem;
+
   }
 
 
   .activity-hero .project-title p {
+
     font-size: 1rem;
+
   }
 
 
-  /* GRADIENTE */
-
   .activity-hero .project-title::before {
-    inset: -20px -60px;
+
+    inset: -20px -50px;
+
   }
 
 
   /* BLOCCHI */
 
-  .activity-block,
-  .activity-block.reverse {
-    flex-direction: column;
+  .activity-block {
+
+    height: 600px;
+
+    margin-bottom: 60px;
+
   }
 
-  .activity-text,
-  .activity-media-grid {
-    width: 100%;
+
+  /* GRADIENTE */
+
+  .activity-block::after {
+
+    background:
+      linear-gradient(
+        to right,
+        rgba(0,0,0,.85) 0%,
+        rgba(0,0,0,.65) 45%,
+        rgba(0,0,0,.20) 75%,
+        rgba(0,0,0,0) 100%
+      );
+
   }
 
-  .activity-media-grid {
-    grid-template-columns: 1fr;
+
+  /* TESTO */
+
+  .activity-text {
+
+    left: 6%;
+
+    width: 82%;
+
+    max-width: none;
+
+    top: auto;
+
+    bottom: 10%;
+
+    transform: none;
+
   }
 
-  .activity-media-grid img {
-    height: auto;
+
+  .activity-text h2 {
+
+    font-size: clamp(2.5rem, 10vw, 4rem);
+
+    margin-bottom: 15px;
+
+  }
+
+
+  .activity-text p {
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+  }
+
+
+  .activity-text ul {
+
+    font-size: .95rem;
+
+  }
+
+}
+
+
+/* ==================================================
+   TELEFONO
+================================================== */
+
+@media (max-width: 600px) {
+
+
+  .activity-hero {
+
+    height: 45vh;
+
+    min-height: 350px;
+
+  }
+
+
+  .activity-block {
+
+    height: 600px;
+
+    margin-bottom: 45px;
+
+  }
+
+
+  .activity-text {
+
+    left: 6%;
+
+    width: 84%;
+
+    bottom: 8%;
+
+  }
+
+
+  .activity-text h2 {
+
+    font-size: 2.7rem;
+
+  }
+
+
+  .activity-text p {
+
+    font-size: .95rem;
+
   }
 
 }

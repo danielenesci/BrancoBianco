@@ -1,0 +1,500 @@
+/* =========================
+   PROGETTO WHITE PACK
+========================= */
+
+
+/* =========================
+   HERO
+========================= */
+
+.project-hero {
+  position: relative;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.project-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   TITOLO HERO
+========================= */
+
+.project-title {
+  position: absolute;
+
+  left: 4%;
+
+  top: 76%;
+
+  transform: translateY(-50%);
+
+  max-width: 650px;
+
+  min-height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  padding-right: 45px;
+
+  color: white;
+
+  z-index: 3;
+}
+
+.project-title::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -30px -120px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,.82),
+      rgba(0,0,0,.55) 45%,
+      rgba(0,0,0,0)
+    );
+
+  z-index: -1;
+}
+
+.project-title h1 {
+  font-size: 4rem;
+
+  margin: 0;
+}
+
+.project-title p {
+  opacity: .85;
+
+  letter-spacing: 2px;
+
+  font-size: 1.35rem;
+}
+
+
+/* =========================
+   SEZIONI PROGETTO
+========================= */
+
+.project-section {
+  padding: 100px 10%;
+}
+
+.project-section h2 {
+  margin-bottom: 20px;
+}
+
+.project-section p {
+  line-height: 1.9;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story-text p {
+  line-height: 1.8;
+}
+
+.story-media img {
+  width: 100%;
+
+  border-radius: 12px;
+}
+
+
+/* =========================
+   INDICE
+========================= */
+
+.project-index {
+  max-width: 900px;
+
+  margin: 60px auto;
+
+  text-align: center;
+}
+
+.project-index h3 {
+  margin-bottom: 20px;
+
+  font-size: 1.2rem;
+
+  letter-spacing: 1px;
+}
+
+.project-index ul {
+  list-style: none;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  justify-content: center;
+}
+
+.project-index a {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border: 1px solid #333;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: #222;
+
+  transition: .3s ease;
+
+  font-size: .9rem;
+}
+
+.project-index a:hover {
+  background: #111;
+
+  color: #fff;
+}
+
+
+/* =========================
+   DIVISORE
+========================= */
+
+.project-divider {
+  max-width: 1200px;
+
+  margin: 80px auto;
+
+  padding: 30px;
+
+  text-align: center;
+
+  border-top: 1px solid #2b2b2b;
+
+  border-bottom: 1px solid #2b2b2b;
+}
+
+
+/* =========================
+   THUMB GALLERY
+========================= */
+
+.gallery-scroll {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+  gap: 14px;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.gallery-scroll img {
+  width: 100%;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  transition: transform .25s ease;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.03);
+}
+
+.project-thumb-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+  gap: 14px;
+
+  margin-top: 25px;
+}
+
+.project-thumb-gallery img {
+  width: 100%;
+
+  height: 160px;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  transition: transform .25s ease;
+}
+
+.project-thumb-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TIMELINE PROGETTO
+========================= */
+
+.project-timeline{
+
+    position:relative;
+
+    max-width:1300px;
+
+    margin:auto;
+}
+
+.project-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:145px;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:rgba(255,255,255,.15);
+
+    z-index:1;
+
+}
+
+
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+
+    column-gap:80px;
+
+    position:relative;
+
+    padding:90px 0;
+
+}
+
+
+
+
+.timeline-year {
+
+  text-align: ;
+
+  font-family:"Playfair Display", serif;
+
+  font-size:3rem;
+
+  color:var(--accent);
+
+  position:relative;
+
+  transform:translateY(-35px) !important;
+
+  
+
+}
+
+
+.timeline-year::after {
+
+  content:"";
+
+  position:absolute;
+
+  right:-68px;
+
+  top:43px;
+
+  width:14px;
+
+  height:14px;
+
+  background:var(--accent);
+
+  border-radius:50%;
+
+  z-index:2;
+
+}
+
+
+.timeline-content{
+
+    max-width:850px;
+
+}
+
+
+
+.timeline-content h2 {
+
+  margin-top:0;
+
+}
+
+
+
+.timeline-content p {
+
+  max-width:750px;
+
+  line-height:1.9;
+
+}
+
+
+
+
+/* immagini dentro timeline */
+
+.timeline-media {
+
+  margin-top:40px;
+
+}
+
+
+.timeline-media img {
+
+  width:100%;
+
+  max-width:700px;
+
+  border-radius:8px;
+
+}
+
+
+
+
+/* SEZIONE FINALE */
+
+.project-ending {
+
+  padding:120px 20px;
+
+  text-align:center;
+
+}
+
+
+
+.project-ending h2 {
+
+  font-size:3rem;
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:900px){
+
+.timeline-item{
+
+    grid-template-columns:1fr;
+
+}
+
+.project-timeline::before{
+
+    left:25px;
+
+}
+
+.timeline-year{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+.timeline-year::after{
+
+    left:-5px;
+
+    right:auto;
+
+}
+
+}
+
+
+/* =========================
+   RESPONSIVE PROGETTO
+========================= */
+
+@media (max-width: 900px) {
+
+  .project-title {
+    left: 4%;
+    right: 4%;
+
+    max-width: none;
+
+    padding: 25px 20px;
+  }
+
+  .project-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-title::before {
+    bottom: 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .project-title h1 {
+    font-size: 2rem;
+  }
+}
